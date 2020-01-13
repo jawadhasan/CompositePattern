@@ -1,0 +1,2 @@
+# CompositePattern
+CompositePattern Solution
