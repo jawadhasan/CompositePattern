@@ -1,23 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace Composite.Structural
+namespace Composite.ConsoleClient.Structural
 {
     public abstract class Component
     {
         public string Name { get; }
-
         //ctor
         public Component(string name)
         {
             Name = name;
         }
-
-        /// <summary>
-        /// PrimaryOperation:
-        /// This is main operation of the pattern, that can be executed both by composite or leaf node.
-        /// </summary>
-        /// <param name="depth"></param>
+       
+        // PrimaryOperation: 
+        //This is main operation of the pattern, that can be executed both by composite or leaf node.
         public abstract void PrimaryOperation(int depth);
     }
 
@@ -32,7 +29,7 @@ namespace Composite.Structural
         //Primary Operation
         public override void PrimaryOperation(int depth)
         {
-            Console.WriteLine(new string('-',depth) + Name);
+            Console.WriteLine(new string('-', depth) + Name);
         }
     }
 
@@ -51,10 +48,10 @@ namespace Composite.Structural
         //Primary Operation
         public override void PrimaryOperation(int depth)
         {
-            Console.WriteLine(new string('-',depth)+Name);
+            Console.WriteLine(new string('-', depth) + Name);
             foreach (var component in _children)
             {
-                component.PrimaryOperation(depth+2);
+                component.PrimaryOperation(depth + 2);
             }
         }
 
@@ -69,4 +66,5 @@ namespace Composite.Structural
             _children.Remove(c);
         }
     }
+
 }

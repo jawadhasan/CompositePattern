@@ -1,2 +1,3 @@
 # CompositePattern
-CompositePattern Solution
+
+hexquote.com
