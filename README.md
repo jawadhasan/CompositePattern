@@ -1,3 +1,5 @@
 # CompositePattern
+Composite Pattern using .NET Example    
 
-hexquote.com
+## Article
+https://hexquote.com/manage-hierarchies-with-composite-pattern/
